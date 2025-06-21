@@ -160,13 +160,13 @@ The financial systemic risk literature provides the theoretical foundation for o
 
 The DebtRank algorithm introduced by Battiston et al. \hyperref[ref6]{[6]} provides a practical methodology for quantifying systemic importance in financial networks, measuring each institution's potential impact on the entire system through stress propagation. This approach has been successfully applied to banking networks \hyperref[ref10]{[10]}, sovereign debt analysis \hyperref[ref11]{[11]}, and corporate credit risk assessment \hyperref[ref12]{[12]}.
 
-Recent developments in systemic risk measurement include network-based approaches \hyperref[ref13]{[13]} and machine learning applications \hyperref[ref14]{[14]}. Stress testing methodologies have evolved to incorporate complex interdependencies \hyperref[ref15]{[15]} and macroeconomic feedback effects \hyperref[ref16]{[16]}.
+Recent developments in systemic risk measurement include network-based approaches \hyperref[ref13]{[13]}. Stress testing methodologies have evolved to incorporate complex interdependencies \hyperref[ref14]{[14]} and macroeconomic feedback effects \hyperref[ref15]{[15]}.
 
 \subsection{Supply Chain Network Analysis}
 
 Supply chain network analysis has focused primarily on operational resilience and vulnerability assessment. Acemoglu et al. \hyperref[ref8]{[8]} demonstrated how firm-level shocks can generate aggregate fluctuations through input-output networks, establishing the theoretical basis for systemic effects in production networks.
 
-Network-based approaches to supply chain risk have examined structural vulnerabilities \hyperref[ref17]{[17]}, cascade effects \hyperref[ref18]{[18]}, and resilience strategies \hyperref[ref19]{[19]}. Geographic concentration and supplier diversification have been identified as key risk factors \hyperref[ref20]{[20]}.
+Network-based approaches to supply chain risk have examined structural vulnerabilities \hyperref[ref16]{[16]}, cascade effects \hyperref[ref17]{[17]}, and resilience strategies \hyperref[ref18]{[18]}. Geographic concentration and supplier diversification have been identified as key risk factors \hyperref[ref19]{[19]}.
 
 However, existing supply chain literature lacks integration with financial contagion models, limiting understanding of how financial distress propagates through operational relationships and how operational disruptions create financial spillovers. This gap represents a significant opportunity for methodological advancement and policy application.
 
@@ -174,13 +174,13 @@ However, existing supply chain literature lacks integration with financial conta
 
 \subsection{Network Construction and Data Generation}
 
-This work construct a synthetic supply chain network representing realistic multi-tier dependencies and financial relationships. The network architecture reflects empirical supply chain structures with hierarchical tier organization and realistic degree distributions \hyperref[ref21]{[21]}.
+This work construct a synthetic supply chain network representing realistic multi-tier dependencies and financial relationships. The network architecture reflects empirical supply chain structures with hierarchical tier organization and realistic degree distributions \hyperref[ref20]{[20]}.
 
-The synthetic network comprises 500 nodes distributed across three supply chain tiers. Upstream suppliers represent 300 nodes providing raw materials and components. Mid-tier manufacturers comprise 80 nodes conducting assembly and manufacturing operations. Downstream retailers consist of 120 nodes handling distribution and retail operations. Directed edges represent supplier-customer relationships, with 4,786 total connections reflecting realistic supply chain density and connectivity patterns observed in empirical studies \hyperref[ref22]{[22]}.
+The synthetic network comprises 500 nodes distributed across three supply chain tiers. Upstream suppliers represent 300 nodes providing raw materials and components. Mid-tier manufacturers comprise 80 nodes conducting assembly and manufacturing operations. Downstream retailers consist of 120 nodes handling distribution and retail operations. Directed edges represent supplier-customer relationships, with 4,786 total connections reflecting realistic supply chain density and connectivity patterns observed in empirical studies \hyperref[ref21]{[21]}.
 
-Node attributes include comprehensive financial and operational characteristics derived from industry benchmarks \hyperref[ref23]{[23]}. Financial metrics encompass revenue measured in millions USD following log-normal distributions by tier, debt-to-equity ratios following Beta distributions with tier-specific parameters calibrated to industry data \hyperref[ref24]{[24]}, liquidity ratios following Gamma distributions reflecting working capital management practices, and working capital days following normal distributions with operational constraints.
+Node attributes include comprehensive financial and operational characteristics derived from industry benchmarks \hyperref[ref22]{[22]}. Financial metrics encompass revenue measured in millions USD following log-normal distributions by tier, debt-to-equity ratios following Beta distributions with tier-specific parameters calibrated to industry data \hyperref[ref23]{[23]}, liquidity ratios following Gamma distributions reflecting working capital management practices, and working capital days following normal distributions with operational constraints.
 
-Operational characteristics include supplier diversification indices reflecting dependency concentration, customer concentration ratios measuring downstream dependencies, geographic locations with regional clustering and distance-based relationships \hyperref[ref25]{[25]}, and contract terms capturing payment schedules and relationship stability metrics.
+Operational characteristics include supplier diversification indices reflecting dependency concentration, customer concentration ratios measuring downstream dependencies, geographic locations with regional clustering and distance-based relationships \hyperref[ref24]{[24]}, and contract terms capturing payment schedules and relationship stability metrics.
 
 Edge attributes capture transaction relationships through transaction volumes representing revenue-weighted relationship strength, dependency strength measuring operational criticality of supplier relationships, lead times reflecting supply chain timing constraints, and payment terms characterizing financial relationship dynamics.
 
@@ -210,39 +210,39 @@ where $h_{ij}$ represents the ultimate impact of node $i$'s failure on node $j$ 
 
 \subsubsection{Financial Fragility Index}
 
-The work construct a composite financial fragility index $FF_i$ for each node $i$ combining multiple vulnerability indicators following established financial risk assessment methodologies \hyperref[ref26]{[26]}:
+The work construct a composite financial fragility index $FF_i$ for each node $i$ combining multiple vulnerability indicators following established financial risk assessment methodologies \hyperref[ref25]{[25]}:
 
 \begin{equation}
 FF_i = w_1 \cdot \text{DebtRatio}_i + w_2 \cdot \text{LiquidityStress}_i + w_3 \cdot \text{WorkingCapitalPressure}_i + w_4 \cdot \text{ConcentrationRisk}_i
 \end{equation}
 
-where weights $w_k$ are empirically calibrated based on financial distress prediction literature \hyperref[ref27]{[27]} and each component is normalized to [0,1]. The index ranges from 0 (financially robust) to 1 (highly fragile).
+where weights $w_k$ are empirically calibrated based on financial distress prediction literature \hyperref[ref26]{[26]} and each component is normalized to [0,1]. The index ranges from 0 (financially robust) to 1 (highly fragile).
 
 \subsubsection{Network Centrality Measures}
 
-It computes comprehensive network centrality metrics to capture different aspects of structural importance \hyperref[ref28]{[28]}. Degree centrality measures direct connectivity as $C_D(i) = \frac{d_i}{n-1}$ where $d_i$ is node degree. Betweenness centrality captures shortest path importance as $C_B(i) = \sum_{s \neq i \neq t} \frac{\sigma_{st}(i)}{\sigma_{st}}$ where $\sigma_{st}$ is the total number of shortest paths from node $s$ to node $t$ and $\sigma_{st}(i)$ is the number passing through node $i$. Eigenvector centrality represents influence through connections using the principal eigenvector of the adjacency matrix \hyperref[ref29]{[29]}. PageRank measures recursive importance as $PR(i) = \frac{1-d}{N} + d \sum_{j \in \text{in}(i)} \frac{PR(j)}{|\text{out}(j)|}$ with damping parameter $d=0.85$ \hyperref[ref30]{[30]}.
+It computes comprehensive network centrality metrics to capture different aspects of structural importance \hyperref[ref27]{[27]}. Degree centrality measures direct connectivity as $C_D(i) = \frac{d_i}{n-1}$ where $d_i$ is node degree. Betweenness centrality captures shortest path importance as $C_B(i) = \sum_{s \neq i \neq t} \frac{\sigma_{st}(i)}{\sigma_{st}}$ where $\sigma_{st}$ is the total number of shortest paths from node $s$ to node $t$ and $\sigma_{st}(i)$ is the number passing through node $i$. Eigenvector centrality represents influence through connections using the principal eigenvector of the adjacency matrix \hyperref[ref28]{[28]}. PageRank measures recursive importance as $PR(i) = \frac{1-d}{N} + d \sum_{j \in \text{in}(i)} \frac{PR(j)}{|\text{out}(j)|}$ with damping parameter $d=0.85$ \hyperref[ref29]{[29]}.
 
 \subsection{Comprehensive Stress Testing Framework}
 
-The stress testing framework encompasses multiple scenario types to provide comprehensive resilience assessment, drawing from both financial stress testing \hyperref[ref15]{[15]} and supply chain risk assessment methodologies \hyperref[ref3]{[3]}.
+The stress testing framework encompasses multiple scenario types to provide comprehensive resilience assessment, drawing from both financial stress testing \hyperref[ref14]{[14]} and supply chain risk assessment methodologies \hyperref[ref3]{[3]}.
 
-Monte Carlo failure simulations implement comprehensive probabilistic analysis to assess network resilience under random failure scenarios. Each simulation consists of shock generation through random selection of failed nodes based on financial fragility probabilities, cascade propagation through systematic failure transmission via supply chain dependencies using threshold-based contagion models \hyperref[ref9]{[9]}, and impact measurement through calculation of total network impact and failure statistics. We conduct 1,000 independent simulation runs to ensure statistical robustness and capture tail risk characteristics \hyperref[ref31]{[31]}.
+Monte Carlo failure simulations implement comprehensive probabilistic analysis to assess network resilience under random failure scenarios. Each simulation consists of shock generation through random selection of failed nodes based on financial fragility probabilities, cascade propagation through systematic failure transmission via supply chain dependencies using threshold-based contagion models \hyperref[ref9]{[9]}, and impact measurement through calculation of total network impact and failure statistics. We conduct 1,000 independent simulation runs to ensure statistical robustness and capture tail risk characteristics \hyperref[ref30]{[30]}.
 
 Targeted attack simulations analyze network vulnerability to strategic attacks through systematic node removal based on different targeting strategies. High-degree attacks involve sequential removal of highest-degree nodes, reflecting potential targeting of major suppliers. High-betweenness attacks target nodes with highest betweenness centrality, focusing on critical intermediaries. High-systemic-importance attacks remove nodes based on DebtRank scores, targeting systemically important suppliers. Random attacks provide baseline comparison with random node removal for statistical control.
 
-Liquidity crisis propagation simulates financial contagion through liquidity stress propagation, modeling how payment delays and working capital constraints cascade through supply chain relationships \hyperref[ref32]{[32]}. The liquidity crisis model incorporates payment term dependencies between suppliers and customers, working capital constraints and cash flow timing effects, credit relationship stress and payment delay propagation mechanisms, and cross-tier contagion through financial interdependencies.
+Liquidity crisis propagation simulates financial contagion through liquidity stress propagation, modeling how payment delays and working capital constraints cascade through supply chain relationships \hyperref[ref31]{[31]}. The liquidity crisis model incorporates payment term dependencies between suppliers and customers, working capital constraints and cash flow timing effects, credit relationship stress and payment delay propagation mechanisms, and cross-tier contagion through financial interdependencies.
 
-Percolation analysis conducts systematic examination of network connectivity degradation patterns through progressive node removal \hyperref[ref33]{[33]}. This involves progressive random node removal while monitoring the largest connected component size, characterizing continuous fragmentation behavior and connectivity decline patterns across the removal spectrum.
+Percolation analysis conducts systematic examination of network connectivity degradation patterns through progressive node removal \hyperref[ref32]{[32]}. This involves progressive random node removal while monitoring the largest connected component size, characterizing continuous fragmentation behavior and connectivity decline patterns across the removal spectrum.
 
 \subsection{Verification and Validation Framework}
 
-All analysis components incorporate comprehensive verification protocols ensuring methodological rigor and reproducibility \hyperref[ref34]{[34]}. Data integrity verification provides systematic validation of network structure and attribute consistency. Statistical validation encompasses cross-validation of risk metrics and simulation results using bootstrap methods \hyperref[ref35]{[35]}. Consistency checking verifies cross-module result consistency through independent calculation verification. Reproducibility protocols ensure complete documentation and code verification with version control and dependency management.
+All analysis components incorporate comprehensive verification protocols ensuring methodological rigor and reproducibility \hyperref[ref33]{[33]}. Data integrity verification provides systematic validation of network structure and attribute consistency. Statistical validation encompasses cross-validation of risk metrics and simulation results using bootstrap methods \hyperref[ref34]{[34]}. Consistency checking verifies cross-module result consistency through independent calculation verification. Reproducibility protocols ensure complete documentation and code verification with version control and dependency management.
 
 \section{Results}
 
 \subsection{Network Characteristics and Systemic Risk Identification}
 
-Analysis reveals significant heterogeneity in systemic risk profiles across the 500-node supply chain network. The network exhibits small-world properties with strong clustering within supply chain tiers (clustering coefficient $C = 0.324$) and efficient path connectivity across tiers (average path length $L = 3.47$), consistent with empirical supply chain network studies \hyperref[ref17]{[17]}. Table 1 presents the comprehensive network characteristics and structural properties.
+Analysis reveals significant heterogeneity in systemic risk profiles across the 500-node supply chain network. The network exhibits small-world properties with strong clustering within supply chain tiers (clustering coefficient $C = 0.324$) and efficient path connectivity across tiers (average path length $L = 3.47$), consistent with empirical supply chain network studies \hyperref[ref16]{[16]}. Table 1 presents the comprehensive network characteristics and structural properties.
 
 \begin{table}[H]
 \centering
@@ -459,7 +459,7 @@ Network resilience analysis evaluates the system's capacity to maintain function
 
 \subsubsection{Percolation Analysis Methodology}
 
-Percolation analysis conducts systematic examination of network connectivity degradation patterns through progressive node removal \hyperref[ref33]{[33]}. This involves progressive random node removal while monitoring the largest connected component size, characterizing continuous fragmentation behavior and connectivity decline patterns across the removal spectrum.
+Percolation analysis conducts systematic examination of network connectivity degradation patterns through progressive node removal \hyperref[ref32]{[32]}. This involves progressive random node removal while monitoring the largest connected component size, characterizing continuous fragmentation behavior and connectivity decline patterns across the removal spectrum.
 
 The percolation simulation protocol removes nodes randomly at incremental rates from 0\% to 80\% in 10\% intervals. For each removal fraction, 50 independent simulations are conducted to ensure statistical reliability.
 
@@ -585,48 +585,47 @@ The synthetic supply chain network data, analysis code, and verification outputs
 
 \label{ref13}[13] Billio, M., Getmansky, M., Lo, A.W., and Pelizzon, L. (2012) Econometric measures of connectedness and systemic risk in the finance and insurance sectors. \emph{Journal of Financial Economics}, 104(3):535-559. \href{https://doi.org/10.1016/j.jfineco.2011.12.010}{https://doi.org/10.1016/j.jfineco.2011.12.010}
 
-\label{ref14}[14] Tobback, E., Bellotti, T., Moeyersoms, J., Stankova, M., and Martens, D. (2017) Bank failure prediction with machine learning methods. \emph{Journal of Financial Services Research}, 52(1):37-64. \href{https://doi.org/10.1007/s10693-016-0264-y}{https://doi.org/10.1007/s10693-016-0264-y}
 
-\label{ref15}[15] Bisias, D., Flood, M., Lo, A.W., and Valavanis, S. (2012) A survey of systemic risk analytics. \emph{Annual Review of Financial Economics}, 4(1):255-296. \href{https://doi.org/10.1146/annurev-financial-110311-101754}{https://doi.org/10.1146/annurev-financial-110311-101754}
+\label{ref14}[14] Bisias, D., Flood, M., Lo, A.W., and Valavanis, S. (2012) A survey of systemic risk analytics. \emph{Annual Review of Financial Economics}, 4(1):255-296. \href{https://doi.org/10.1146/annurev-financial-110311-101754}{https://doi.org/10.1146/annurev-financial-110311-101754}
 
-\label{ref16}[16] Hanson, S.G., Kashyap, A.K., and Stein, J.C. (2011) A macroprudential approach to financial regulation. \emph{Journal of Economic Perspectives}, 25(1):3-28. \href{https://doi.org/10.1257/jep.25.1.3}{https://doi.org/10.1257/jep.25.1.3}
+\label{ref15}[15] Hanson, S.G., Kashyap, A.K., and Stein, J.C. (2011) A macroprudential approach to financial regulation. \emph{Journal of Economic Perspectives}, 25(1):3-28. \href{https://doi.org/10.1257/jep.25.1.3}{https://doi.org/10.1257/jep.25.1.3}
 
-\label{ref17}[17] Bode, C. and Wagner, S.M. (2015) Structural drivers of upstream supply chain complexity and the frequency of supply chain disruptions. \emph{Journal of Operations Management}, 36:215-228. \href{https://doi.org/10.1016/j.jom.2014.12.004}{https://doi.org/10.1016/j.jom.2014.12.004}
+\label{ref16}[16] Bode, C. and Wagner, S.M. (2015) Structural drivers of upstream supply chain complexity and the frequency of supply chain disruptions. \emph{Journal of Operations Management}, 36:215-228. \href{https://doi.org/10.1016/j.jom.2014.12.004}{https://doi.org/10.1016/j.jom.2014.12.004}
 
-\label{ref18}[18] Garvey, M.D., Carnovale, S., and Yeniyurt, S. (2015) An analytical framework for supply network risk propagation: A Bayesian network approach. \emph{European Journal of Operational Research}, 243(2):618-627. \href{https://doi.org/10.1016/j.ejor.2014.10.034}{https://doi.org/10.1016/j.ejor.2014.10.034}
+\label{ref17}[17] Garvey, M.D., Carnovale, S., and Yeniyurt, S. (2015) An analytical framework for supply network risk propagation: A Bayesian network approach. \emph{European Journal of Operational Research}, 243(2):618-627. \href{https://doi.org/10.1016/j.ejor.2014.10.034}{https://doi.org/10.1016/j.ejor.2014.10.034}
 
-\label{ref19}[19] Ambulkar, S., Blackhurst, J., and Grawe, S. (2015) Firm's resilience to supply chain disruptions: Scale development and empirical examination. \emph{Journal of Operations Management}, 33:111-122. \href{https://doi.org/10.1016/j.jom.2014.11.002}{https://doi.org/10.1016/j.jom.2014.11.002}
+\label{ref18}[18] Ambulkar, S., Blackhurst, J., and Grawe, S. (2015) Firm's resilience to supply chain disruptions: Scale development and empirical examination. \emph{Journal of Operations Management}, 33:111-122. \href{https://doi.org/10.1016/j.jom.2014.11.002}{https://doi.org/10.1016/j.jom.2014.11.002}
 
-\label{ref20}[20] Wagner, S.M. and Bode, C. (2008) An empirical examination of supply chain performance along several dimensions of risk. \emph{Journal of Business Logistics}, 29(1):307-325. \href{https://doi.org/10.1002/j.2158-1592.2008.tb00081.x}{https://doi.org/10.1002/j.2158-1592.2008.tb00081.x}
+\label{ref19}[19] Wagner, S.M. and Bode, C. (2008) An empirical examination of supply chain performance along several dimensions of risk. \emph{Journal of Business Logistics}, 29(1):307-325. \href{https://doi.org/10.1002/j.2158-1592.2008.tb00081.x}{https://doi.org/10.1002/j.2158-1592.2008.tb00081.x}
 
-\label{ref21}[21] Iyer, A.V., Seshadri, S., and Vasher, R. (2009) Toyota Supply Chain Management: A Strategic Approach to Toyota's Renowned System. McGraw-Hill.
+\label{ref20}[20] Iyer, A.V., Seshadri, S., and Vasher, R. (2009) Toyota Supply Chain Management: A Strategic Approach to Toyota's Renowned System. McGraw-Hill.
 
-\label{ref22}[22] Choi, T.Y. and Krause, D.R. (2006) The supply base and its complexity: Implications for transaction costs, risks, and innovation. \emph{Journal of Operations Management}, 24(5):637-652. \href{https://doi.org/10.1016/j.jom.2005.07.002}{https://doi.org/10.1016/j.jom.2005.07.002}
+\label{ref21}[21] Choi, T.Y. and Krause, D.R. (2006) The supply base and its complexity: Implications for transaction costs, risks, and innovation. \emph{Journal of Operations Management}, 24(5):637-652. \href{https://doi.org/10.1016/j.jom.2005.07.002}{https://doi.org/10.1016/j.jom.2005.07.002}
 
-\label{ref23}[23] Shan, J. and Zhu, K. (2013) Inventory management in supply chains with consideration of logistics, green investment and different carbon emissions policies. \emph{Computers \& Industrial Engineering}, 64(1):194-203. \href{https://doi.org/10.1016/j.cie.2012.09.019}{https://doi.org/10.1016/j.cie.2012.09.019}
+\label{ref22}[22] Shan, J. and Zhu, K. (2013) Inventory management in supply chains with consideration of logistics, green investment and different carbon emissions policies. \emph{Computers \& Industrial Engineering}, 64(1):194-203. \href{https://doi.org/10.1016/j.cie.2012.09.019}{https://doi.org/10.1016/j.cie.2012.09.019}
 
-\label{ref24}[24] Damodaran, A. (2023) Applied Corporate Finance. 5th Edition, Wiley.
+\label{ref23}[23] Damodaran, A. (2023) Applied Corporate Finance. 5th Edition, Wiley.
 
-\label{ref25}[25] Sodhi, M.S. and Tang, C.S. (2012) Managing Supply Chain Risk. Springer. \href{https://doi.org/10.1007/978-1-4614-3238-8}{https://doi.org/10.1007/978-1-4614-3238-8}
+\label{ref24}[24] Sodhi, M.S. and Tang, C.S. (2012) Managing Supply Chain Risk. Springer. \href{https://doi.org/10.1007/978-1-4614-3238-8}{https://doi.org/10.1007/978-1-4614-3238-8}
 
-\label{ref26}[26] Campbell, J.Y., Hilscher, J., and Szilagyi, J. (2008) In search of distress risk. \emph{Journal of Finance}, 63(6):2899-2939. \href{https://doi.org/10.1111/j.1540-6261.2008.01416.x}{https://doi.org/10.1111/j.1540-6261.2008.01416.x}
+\label{ref25}[25] Campbell, J.Y., Hilscher, J., and Szilagyi, J. (2008) In search of distress risk. \emph{Journal of Finance}, 63(6):2899-2939. \href{https://doi.org/10.1111/j.1540-6261.2008.01416.x}{https://doi.org/10.1111/j.1540-6261.2008.01416.x}
 
-\label{ref27}[27] Altman, E.I., Iwanicz-Drozdowska, M., Laitinen, E.K., and Suvas, A. (2017) Financial distress prediction in an international context: A review and empirical analysis of Altman's Z-score model. \emph{Journal of International Financial Management \& Accounting}, 28(2):131-171. \href{https://doi.org/10.1111/jifm.12053}{https://doi.org/10.1111/jifm.12053}
+\label{ref26}[26] Altman, E.I., Iwanicz-Drozdowska, M., Laitinen, E.K., and Suvas, A. (2017) Financial distress prediction in an international context: A review and empirical analysis of Altman's Z-score model. \emph{Journal of International Financial Management \& Accounting}, 28(2):131-171. \href{https://doi.org/10.1111/jifm.12053}{https://doi.org/10.1111/jifm.12053}
 
-\label{ref28}[28] Freeman, L.C. (1978) Centrality in social networks conceptual clarification. \emph{Social Networks}, 1(3):215-239. \href{https://doi.org/10.1016/0378-8733(78)90021-7}{https://doi.org/10.1016/0378-8733(78)90021-7}
+\label{ref27}[27] Freeman, L.C. (1978) Centrality in social networks conceptual clarification. \emph{Social Networks}, 1(3):215-239. \href{https://doi.org/10.1016/0378-8733(78)90021-7}{https://doi.org/10.1016/0378-8733(78)90021-7}
 
-\label{ref29}[29] Bonacich, P. (1987) Power and centrality: A family of measures. \emph{American Journal of Sociology}, 92(5):1170-1182. \href{https://doi.org/10.1086/228631}{https://doi.org/10.1086/228631}
+\label{ref28}[28] Bonacich, P. (1987) Power and centrality: A family of measures. \emph{American Journal of Sociology}, 92(5):1170-1182. \href{https://doi.org/10.1086/228631}{https://doi.org/10.1086/228631}
 
-\label{ref30}[30] Brin, S. and Page, L. (1998) The anatomy of a large-scale hypertextual web search engine. \emph{Computer Networks and ISDN Systems}, 30(1-7):107-117. \href{https://doi.org/10.1016/S0169-7552(98)00110-X}{https://doi.org/10.1016/S0169-7552(98)00110-X}
+\label{ref29}[29] Brin, S. and Page, L. (1998) The anatomy of a large-scale hypertextual web search engine. \emph{Computer Networks and ISDN Systems}, 30(1-7):107-117. \href{https://doi.org/10.1016/S0169-7552(98)00110-X}{https://doi.org/10.1016/S0169-7552(98)00110-X}
 
-\label{ref31}[31] McNeil, A.J., Frey, R., and Embrechts, P. (2015) Quantitative Risk Management: Concepts, Techniques and Tools. Princeton University Press.
+\label{ref30}[30] McNeil, A.J., Frey, R., and Embrechts, P. (2015) Quantitative Risk Management: Concepts, Techniques and Tools. Princeton University Press.
 
-\label{ref32}[32] Gai, P. and Kapadia, S. (2010) Contagion in financial networks. \emph{Proceedings of the Royal Society A}, 466(2120):2401-2423. \href{https://doi.org/10.1098/rspa.2009.0410}{https://doi.org/10.1098/rspa.2009.0410}
+\label{ref31}[31] Gai, P. and Kapadia, S. (2010) Contagion in financial networks. \emph{Proceedings of the Royal Society A}, 466(2120):2401-2423. \href{https://doi.org/10.1098/rspa.2009.0410}{https://doi.org/10.1098/rspa.2009.0410}
 
-\label{ref33}[33] Albert, R. and Barabási, A.L. (2002) Statistical mechanics of complex networks. \emph{Reviews of Modern Physics}, 74(1):47. \href{https://doi.org/10.1103/RevModPhys.74.47}{https://doi.org/10.1103/RevModPhys.74.47}
+\label{ref32}[32] Albert, R. and Barabási, A.L. (2002) Statistical mechanics of complex networks. \emph{Reviews of Modern Physics}, 74(1):47. \href{https://doi.org/10.1103/RevModPhys.74.47}{https://doi.org/10.1103/RevModPhys.74.47}
 
-\label{ref34}[34] Sandve, G.K., Nekrutenko, A., Taylor, J., and Hovig, E. (2013) Ten simple rules for reproducible computational research. \emph{PLoS Computational Biology}, 9(10):e1003285. \href{https://doi.org/10.1371/journal.pcbi.1003285}{https://doi.org/10.1371/journal.pcbi.1003285}
+\label{ref33}[33] Sandve, G.K., Nekrutenko, A., Taylor, J., and Hovig, E. (2013) Ten simple rules for reproducible computational research. \emph{PLoS Computational Biology}, 9(10):e1003285. \href{https://doi.org/10.1371/journal.pcbi.1003285}{https://doi.org/10.1371/journal.pcbi.1003285}
 
-\label{ref35}[35] Efron, B. and Tibshirani, R.J. (1979) Bootstrap methods for standard errors, confidence intervals, and other measures of statistical accuracy. \emph{Statistical Science}, 1(1):54-75. \href{https://doi.org/10.1214/ss/1177013815}{https://doi.org/10.1214/ss/1177013815}
+\label{ref34}[34] Efron, B. and Tibshirani, R.J. (1979) Bootstrap methods for standard errors, confidence intervals, and other measures of statistical accuracy. \emph{Statistical Science}, 1(1):54-75. \href{https://doi.org/10.1214/ss/1177013815}{https://doi.org/10.1214/ss/1177013815}
 
 \end{document}
