@@ -9,8 +9,8 @@ authors:
     orcid: "https://orcid.org/0000-0000-0000-0000"
     affiliation: "Department of Data Science, Carolina University"
     email: "owolabio@carolinau.edu"
-repository-code: "https://github.com/omoshola-o/network_analysis_supply_chain"
-url: "https://github.com/omoshola-o/network_analysis_supply_chain"
+repository-code: "https://github.com/omoshola-o/urlnetwork_analysis_supply_chain"
+url: "https://github.com/omoshola-o/urlnetwork_analysis_supply_chain"
 license: CC-BY-4.0
 keywords:
   - "supply chain risk"
