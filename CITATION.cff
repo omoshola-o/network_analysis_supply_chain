@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Network Analysis for Systemic Risk Assessment in Supply Chains"
+abstract: "A cross-disciplinary framework integrating financial contagion models with supply chain network analysis for resilience assessment and policy guidance."
+authors:
+  - family-names: "Owolabi"
+    given-names: "Omoshola S."
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "Department of Data Science, Carolina University"
+    email: "owolabio@carolinau.edu"
+repository-code: "https://github.com/omoshola-o/network_analysis_supply_chain"
+url: "https://github.com/omoshola-o/network_analysis_supply_chain"
+license: CC-BY-4.0
+keywords:
+  - "supply chain risk"
+  - "systemic risk"
+  - "network analysis"
+  - "financial contagion"
+  - "resilience assessment"
+  - "too-central-to-fail"
+version: "1.0.0"
+date-released: "2024-12-21"

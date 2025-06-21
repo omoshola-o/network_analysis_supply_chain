@@ -1,0 +1,48 @@
+{
+  "monte_carlo_summary": {
+    "num_simulations": 1000,
+    "mean_failure_rate": 0.05363800000000002,
+    "std_failure_rate": 0.00986878695686557,
+    "percentile_failure_rates": "[0.038 0.048 0.054 0.06  0.07 ]",
+    "mean_economic_impact": 0.03931777062925576,
+    "mean_cascade_length": 1.072,
+    "max_observed_failure_rate": 0.086
+  },
+  "attack_simulation_summary": {
+    "high_degree": {
+      "attack_round": 10,
+      "targets_so_far": 10,
+      "total_failures": 16,
+      "failure_rate": 0.032,
+      "economic_impact": 0.09604153634426714,
+      "largest_component_size": 0.968
+    },
+    "high_betweenness": {
+      "attack_round": 10,
+      "targets_so_far": 10,
+      "total_failures": 10,
+      "failure_rate": 0.02,
+      "economic_impact": 0.020588078482813812,
+      "largest_component_size": 0.98
+    },
+    "high_systemic_importance": {
+      "attack_round": 10,
+      "targets_so_far": 10,
+      "total_failures": 10,
+      "failure_rate": 0.02,
+      "economic_impact": 0.015327613164307096,
+      "largest_component_size": 0.98
+    },
+    "random": {
+      "attack_round": 10,
+      "targets_so_far": 10,
+      "total_failures": 10,
+      "failure_rate": 0.02,
+      "economic_impact": 0.020788102929097826,
+      "largest_component_size": 0.98
+    }
+  },
+  "liquidity_crisis_impact": 0.422,
+  "percolation_threshold": null,
+  "network_resilience_score": 0.19999999999999996
+}

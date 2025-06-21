@@ -1,0 +1,9 @@
+{
+  "total_nodes": 500,
+  "high_risk_nodes": 311,
+  "critical_nodes": 296,
+  "fragile_nodes": 1,
+  "avg_systemic_importance": 0.26678709801570244,
+  "avg_financial_fragility": 0.3295865866656797,
+  "verification_pass_rate": 0.0
+}

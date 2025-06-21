@@ -1,0 +1,56 @@
+{
+  "network_topology": {
+    "file_path": "journal_package/generated_figures/network_topology.png",
+    "caption": "Supply chain network topology with nodes colored by systemic_importance and sized by revenue_millions. Critical nodes (too-central-to-fail) are highlighted in red with dark borders.",
+    "label": "fig:network_topology",
+    "verification_status": true
+  },
+  "risk_distributions": {
+    "file_path": "journal_package/generated_figures/risk_distributions.png",
+    "caption": "Distribution of key risk metrics across supply chain network nodes. Panel shows histograms with kernel density estimates overlaid. Red and orange dashed lines indicate mean and median values respectively.",
+    "label": "fig:risk_distributions",
+    "verification_status": true
+  },
+  "correlation_heatmap": {
+    "file_path": "journal_package/generated_figures/correlation_heatmap.png",
+    "caption": "Correlation matrix of risk metrics showing pairwise relationships between systemic importance, financial fragility, and centrality measures. Color intensity indicates correlation strength.",
+    "label": "fig:correlation_heatmap",
+    "verification_status": true
+  },
+  "spillover_heatmap": {
+    "file_path": "journal_package/generated_figures/spillover_heatmap.png",
+    "caption": "Cross-sector spillover matrix showing contagion strengths between supply chain tiers. Higher values indicate stronger spillover effects from source to target sectors.",
+    "label": "fig:spillover_heatmap",
+    "verification_status": true
+  },
+  "monte_carlo_results": {
+    "file_path": "journal_package/generated_figures/monte_carlo_results.png",
+    "caption": "Monte Carlo simulation results showing distribution of network failure rates (left) and correlation with cascade propagation length (right). Based on 1000 random failure scenarios.",
+    "label": "fig:monte_carlo_results",
+    "verification_status": true
+  },
+  "attack_simulation": {
+    "file_path": "journal_package/generated_figures/attack_simulation.png",
+    "caption": "Progressive targeted attack results showing network failure rates as critical nodes are sequentially removed. Different strategies demonstrate varying levels of network vulnerability.",
+    "label": "fig:attack_simulation",
+    "verification_status": true
+  },
+  "cascade_simulation": {
+    "file_path": "journal_package/generated_figures/cascade_simulation.png",
+    "caption": "Liquidity crisis cascade propagation showing cumulative affected nodes (left) and new infections per round (right). Demonstrates the temporal dynamics of financial contagion.",
+    "label": "fig:cascade_simulation",
+    "verification_status": true
+  },
+  "percolation_analysis": {
+    "file_path": "journal_package/generated_figures/percolation_analysis.png",
+    "caption": "Network percolation analysis showing largest connected component size as a function of random node removal. Red dashed line indicates the percolation threshold where network connectivity collapses.",
+    "label": "fig:percolation_analysis",
+    "verification_status": true
+  },
+  "interactive_network": {
+    "file_path": "journal_package/generated_figures/interactive_network.png",
+    "caption": "Interactive network visualization of the supply chain. Node sizes correspond to revenue levels, colors indicate systemic importance scores. Static version shown; interactive version available online.",
+    "label": "fig:interactive_network",
+    "verification_status": true
+  }
+}
