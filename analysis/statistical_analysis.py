@@ -12,7 +12,7 @@ Key Features:
 - Cross-sector spillover analysis
 - Built-in mathematical verification
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
