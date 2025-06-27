@@ -15,7 +15,7 @@ Key Features:
 - Built-in plot accuracy verification
 - LaTeX-ready figure generation
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
