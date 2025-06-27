@@ -14,7 +14,7 @@ Key Features:
 - Comprehensive audit trails
 - Automated quality assurance
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
