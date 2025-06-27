@@ -9,7 +9,7 @@ This module implements comprehensive stress testing scenarios including:
 - Correlated shock models
 - Percolation analysis for cascading failures
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
