@@ -6,7 +6,7 @@ This module handles synthetic data generation, preprocessing, and integrity vali
 for supply chain network analysis. Includes built-in verification functions and
 LaTeX output preparation.
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
