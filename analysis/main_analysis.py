@@ -6,16 +6,8 @@ This module orchestrates the complete analysis workflow, integrating all compone
 data generation, risk analysis, stress testing, visualization, and LaTeX generation.
 Includes comprehensive verification and quality assurance at each step.
 
-Execution Protocol:
-1. Generate/load supply chain network data
-2. Compute systemic risk metrics with verification
-3. Perform comprehensive stress testing
-4. Generate publication-ready visualizations
-5. Create complete LaTeX journal article
-6. Run comprehensive verification suite
-7. Generate final reproducibility report
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
