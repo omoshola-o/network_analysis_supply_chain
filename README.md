@@ -134,7 +134,7 @@ This research includes comprehensive validation protocols:
 @article{omoshola2025network,
   title={Network Analysis for Systemic Risk Assessment in Supply Chains: A Cross-Disciplinary Framework Integrating Financial Contagion Models},
   author={Omoshola, O.S.},
-  journal={Journal of Supply Chain Risk Management},
+  journal={Journal of Data Analysis and Information Processing},
   year={2025},
   note={In preparation}
 }
