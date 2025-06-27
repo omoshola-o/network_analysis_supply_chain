@@ -14,7 +14,7 @@ Key Features:
 - Journal-specific formatting templates
 - Comprehensive content verification
 
-Author: Generated Analysis Framework
+Author: Omoshola Owolabi
 Date: 2025-06-20
 """
 
