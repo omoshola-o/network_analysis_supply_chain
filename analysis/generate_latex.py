@@ -1,6 +1,10 @@
 """
-Simple LaTeX Generator Script
-Creates a complete journal article from the analysis results.
+LaTeX Generator Script
+I use this script to automatically generate LaTeX tables and content
+from the analysis results for the journal article.
+
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import json

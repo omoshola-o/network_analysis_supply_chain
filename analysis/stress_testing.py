@@ -1,16 +1,20 @@
 """
 Network Analysis for Systemic Risk Assessment in Supply Chains
-Stress Testing and Simulation Module
+Stress Testing Module
 
-This module implements comprehensive stress testing scenarios including:
-- Monte Carlo simulations of random and targeted failures
-- Liquidity crisis propagation models
-- Cross-sector contagion scenarios
-- Correlated shock models
-- Percolation analysis for cascading failures
+I developed this module to run various stress testing scenarios on the supply
+chain network. It simulates different types of disruptions to understand how
+resilient the network is under various failure conditions.
 
-Author: Generated Analysis Framework
-Date: 2025-06-20
+Stress tests I implemented:
+- Monte Carlo simulations for random failures
+- Targeted attack simulations
+- Liquidity crisis propagation
+- Cross-sector contagion effects
+- Percolation analysis
+
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import numpy as np

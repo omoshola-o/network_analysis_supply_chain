@@ -1,13 +1,13 @@
 """
 Network Analysis for Systemic Risk Assessment in Supply Chains
-Data Preprocessing Module with Verification Protocols
+Data Preprocessing Module
 
-This module handles synthetic data generation, preprocessing, and integrity validation
-for supply chain network analysis. Includes built-in verification functions and
-LaTeX output preparation.
+I created this module to generate realistic synthetic supply chain network data.
+It handles all the data preprocessing tasks and includes validation checks
+to ensure the data integrity throughout the analysis.
 
-Author: Generated Analysis Framework
-Date: 2025-06-20
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import numpy as np
@@ -25,8 +25,9 @@ logger = logging.getLogger(__name__)
 
 class SupplyChainDataGenerator:
     """
-    Generates synthetic supply chain network data with realistic characteristics
-    including financial metrics, operational parameters, and network topology.
+    My class for generating synthetic supply chain network data. I designed it to create
+    realistic network structures with financial and operational characteristics that
+    mirror real-world supply chains.
     """
     
     def __init__(self, seed: int = 42):

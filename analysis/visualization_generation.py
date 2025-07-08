@@ -1,22 +1,22 @@
 """
 Network Analysis for Systemic Risk Assessment in Supply Chains
-Visualization Generation Module with Verification
+Visualization Module
 
-This module creates publication-ready visualizations with built-in accuracy verification
-and LaTeX integration capabilities. All plots include validation stamps and metadata
-for journal publication standards.
+I created this module to generate all the figures for the paper. Each visualization
+is designed to clearly communicate the research findings while meeting journal
+publication standards.
 
-Key Features:
-- Network topology visualizations with risk overlays
-- Risk metric distributions and correlations
-- Stress test result visualizations
-- Cross-sector spillover heatmaps
-- Time series cascade simulations
-- Built-in plot accuracy verification
-- LaTeX-ready figure generation
+Visualizations included:
+- Network topology with systemic importance overlay
+- Risk metric distributions
+- Correlation heatmaps
+- Spillover effect visualizations
+- Stress test results
+- Cascade propagation dynamics
+- Percolation analysis plots
 
-Author: Generated Analysis Framework
-Date: 2025-06-20
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import numpy as np

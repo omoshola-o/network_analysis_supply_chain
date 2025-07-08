@@ -42,9 +42,6 @@ network_analysis_supply_chain/
 │   ├── stress_testing.py
 │   ├── visualization_generation.py
 │   └── verification_suite.py
-├── reports/                       # Validation and consistency reports
-│   ├── COMPREHENSIVE_VALIDITY_CONSISTENCY_REPORT.md
-│   └── FINAL_CONSISTENCY_VALIDATION_REPORT.md
 └── README.md                      # This file
 ```
 
@@ -120,29 +117,17 @@ pip install networkx pandas numpy matplotlib seaborn scipy scikit-learn
 - **Figure 7**: Liquidity crisis cascade propagation
 - **Figure 8**: Network percolation analysis
 
-## 🔍 Validation
-
-This research includes comprehensive validation protocols:
-- **100% numerical accuracy** verified across all metrics
-- **Complete consistency** between analysis and documentation
-- **Reproducible methodology** with detailed verification reports
-- **Template compliance** maintained throughout document preparation
-
 ## 📚 Citation
 
 ```bibtex
 @article{omoshola2025network,
   title={Network Analysis for Systemic Risk Assessment in Supply Chains: A Cross-Disciplinary Framework Integrating Financial Contagion Models},
   author={Omoshola, O.S.},
-  journal={Journal of Supply Chain Risk Management},
+  journal={Journal of Data Analysis and Information Processing},
   year={2025},
   note={In preparation}
 }
 ```
-
-## 📄 License
-
-This work is licensed under the Creative Commons Attribution International License (CC BY 4.0).
 
 ## 👨‍💼 Author
 

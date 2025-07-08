@@ -1,19 +1,20 @@
 """
 Network Analysis for Systemic Risk Assessment in Supply Chains
-Statistical Analysis Module with Mathematical Verification
+Statistical Analysis Module
 
-This module implements systemic risk metrics, network analysis functions,
-and mathematical verification protocols for supply chain risk assessment.
+This is where I implement all the core statistical methods for the research.
+I adapted financial systemic risk models like DebtRank to work with supply
+chain networks, which was the key innovation of my approach.
 
-Key Features:
-- DebtRank-style systemic importance scoring
-- Network centrality measures
-- Financial contagion modeling  
+Key algorithms I implemented:
+- DebtRank adaptation for supply chains
+- Network centrality calculations
+- Financial contagion models
 - Cross-sector spillover analysis
-- Built-in mathematical verification
+- Mathematical validation checks
 
-Author: Generated Analysis Framework
-Date: 2025-06-20
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import numpy as np

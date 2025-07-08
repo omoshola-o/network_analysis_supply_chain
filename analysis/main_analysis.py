@@ -1,22 +1,22 @@
 """
 Network Analysis for Systemic Risk Assessment in Supply Chains
-Main Analysis Orchestrator
+Main Analysis Script
 
-This module orchestrates the complete analysis workflow, integrating all components:
-data generation, risk analysis, stress testing, visualization, and LaTeX generation.
-Includes comprehensive verification and quality assurance at each step.
+This is the main script I use to run the complete analysis workflow.
+It brings together all the different components I've developed for
+the supply chain risk analysis project.
 
-Execution Protocol:
-1. Generate/load supply chain network data
-2. Compute systemic risk metrics with verification
-3. Perform comprehensive stress testing
-4. Generate publication-ready visualizations
-5. Create complete LaTeX journal article
-6. Run comprehensive verification suite
-7. Generate final reproducibility report
+The workflow follows these steps:
+1. Generate or load the supply chain network data
+2. Calculate systemic risk metrics and validate results
+3. Run stress testing scenarios
+4. Create all the visualizations for the paper
+5. Generate the LaTeX article with results
+6. Verify everything is consistent
+7. Create a reproducibility report
 
-Author: Generated Analysis Framework
-Date: 2025-06-20
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import numpy as np

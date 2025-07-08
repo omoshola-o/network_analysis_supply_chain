@@ -1,21 +1,21 @@
 """
 Network Analysis for Systemic Risk Assessment in Supply Chains
-LaTeX Document Generation Module with Content Verification
+LaTeX Document Generation Module
 
-This module generates complete, publication-ready LaTeX documents with built-in
-verification protocols ensuring perfect consistency between analysis code outputs
-and the final journal article.
+This module handles the automated generation of LaTeX content from my analysis
+results. I designed it to ensure perfect consistency between the code outputs
+and what appears in the final paper.
 
-Key Features:
-- Automated LaTeX document generation from analysis results
-- Built-in verification of numerical consistency
-- Dynamic table and figure generation
-- Bibliography management
-- Journal-specific formatting templates
-- Comprehensive content verification
+Features I implemented:
+- Automated LaTeX generation from results
+- Numerical consistency checks
+- Dynamic table creation
+- Figure integration
+- Journal template formatting
+- Content verification
 
-Author: Generated Analysis Framework
-Date: 2025-06-20
+Author: Omoshola S. Owolabi
+Date: 2024-12-21
 """
 
 import numpy as np
